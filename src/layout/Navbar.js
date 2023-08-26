@@ -1,24 +1,31 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function ()
-
-{
+export default function Navbar() {
   return (
     <div>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
+          <Link className="navbar-brand" to="/">
+           CourseFlow
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
 
-<nav className="navbar navbar-expand-lg navbar-dark text-bg-dark">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">CourseFlow</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <button>
-      {/* add course button color*/}
-      <button className='btn btn-outline-primary'>Add Course</button>
-    </button>
-  </div>
-</nav>
-
+          <Link className="btn btn-outline-light" to="/adduser">
+            Add Course
+          </Link>
+        </div>
+      </nav>
     </div>
-  )
+  );
 }
